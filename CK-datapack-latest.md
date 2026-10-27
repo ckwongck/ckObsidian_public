@@ -1,13 +1,13 @@
 ---
 title: CK 投資組合最新數據包 (自動每日更新)
-updated: 2026-10-27 13:25:52 HKT
+updated: 2026-10-27 13:26:16 HKT
 source: portfolio_datapack.py (cron 06:00)
 auto: true
 note: 此檔由腳本自動生成，策略筆記請改 CK.md
 ---
 
 === [CK PORTFOLIO MAX DATA PACK v4.1] ===
-* 數據提取時間 (HKT): 2026-10-27 13:25:13
+* 數據提取時間 (HKT): 2026-10-27 13:26:08
 
 ## 一、 賬戶資金與流動性全景 (Liquidity & Buying Power) *v4.1 修復版*
 * Futu 賬戶 (HKD/USD) — OpenD 即時:

@@ -1,27 +1,27 @@
 ---
 title: CK 投資組合最新數據包 (自動每日更新)
-updated: 2026-11-17 06:11:02 HKT
+updated: 2026-11-18 23:44:47 HKT
 source: portfolio_datapack.py (cron 06:00)
 auto: true
 note: 此檔由腳本自動生成，策略筆記請改 CK.md
 ---
 
 === [CK PORTFOLIO MAX DATA PACK v4.1] ===
-* 數據提取時間 (HKT): 2026-11-17 06:00:10
+* 數據提取時間 (HKT): 2026-11-18 23:44:29
 
 ## 一、 賬戶資金與流動性全景 (Liquidity & Buying Power) *v4.1 修復版*
 * Futu 賬戶 (HKD/USD) — OpenD 即時:
-  * 總資產估值: HKD 0 / USD 67,362
+  * 總資產估值: HKD 0 / USD 67,577
   * **實時現金結餘: USD 0 / HKD 0**
-  * 剩餘購買力: 674,052 HKD+USD
+  * 剩餘購買力: 677,946 HKD+USD
 * IB 賬戶 (HKD/USD) — Flex Web Service (每日 02:10 HKT snapshot):
-  * 總資產估值: USD 301,612 (約 HKD 2,352,571) [報表日 2026-11-13, 落後 4 日 ⚠️ 資料落後; 同步於 2026-11-17T05:50]
-  * 現金結餘: HKD 0 / USD 7,218
+  * 總資產估值: USD 297,457 (約 HKD 2,320,161) [報表日 2026-11-17, 落後 1 日; 同步於 2026-11-18T23:44]
+  * 現金結餘: HKD 45,907 / USD 7,216
   * 剩餘購買力 / 可用保證金: [Flex 無此欄位 - 不適用]
   * 註: IB 使用 Flex Web Service (每日 02:10 HKT snapshot), 非即時. 即時需另起 IB Gateway.
 
 * Firstrade 賬戶 (USD) — Apex Clearing 月結單 (manual copy, 無 API):
-  * 總資產估值: USD 41,450 (約 HKD 323,309) [報表日 20260731, 落後 109 日 ⚠️ 資料落後]
+  * 總資產估值: USD 41,450 (約 HKD 323,309) [報表日 20260731, 落後 110 日 ⚠️ 資料落後]
   * 現金結餘: USD 455
   * 剩餘購買力 / 可用保證金: [月結單無此欄位 - 不適用]
   * 註: Firstrade 無公開 API, 月結單人手抄入 holdings_firstrade.json.
@@ -29,44 +29,44 @@ note: 此檔由腳本自動生成，策略筆記請改 CK.md
 ## 二、 實時持倉深度透視 + 微觀結構 X 光 (Full Positions + Micro-Structure) *v4.1*
 | 賬戶 | 代號 | 股數 | 平均成本 | 最新市價 | 市值 | 佔總資產% | 累計P&L | 累計P&L% | IV Rank | Vol/30dAvg | 下次財報 | 數據來源 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Futu | US.SCHD | 588.0 | 30.206 USD | 35.87 USD | 21092 USD | 5.2% | 3331 USD | 18.8% | - | - | - | live-OpenD |
-| Futu | US.QQQM | 35.0 | 240.873 USD | 272.56 USD | 9540 USD | 2.4% | 1109 USD | 13.2% | 38.7 | 1.26 | - | live-OpenD |
-| Futu | US.AVGO | 51.0 | 370.35 USD | 333.23 USD | 16995 USD | 4.2% | -1893 USD | -10.0% | 11.5 | 1.01 | - | live-OpenD |
-| Futu | US.AAPL | 56.0 | 305.83 USD | 352.521 USD | 19741 USD | 4.9% | 2615 USD | 15.3% | 3.4 | 1.01 | - | live-OpenD |
-| IB | GRID | 218.0 | 196.402405573 USD | 160.29 USD | 34943 USD | 8.7% | - | - | 49.9 | 1.03 | - | Flex(2026-11-13) |
-| IB | PLTR | 227.0 | 131.423413062 USD | 167.99 USD | 38134 USD | 9.5% | - | - | - | - | - | Flex(2026-11-13) |
-| IB | QQQM | 434.0 | 249.066141779 USD | 279.97 USD | 121507 USD | 30.2% | - | - | 38.7 | 1.26 | - | Flex(2026-11-13) |
-| IB | SGOV | 387.0 | 100.683505574 USD | 100.56 USD | 38917 USD | 9.7% | - | - | - | - | - | Flex(2026-11-13) |
-| IB | SPCX | 122.0 | 140.002405574 USD | 139.11 USD | 16971 USD | 4.2% | - | - | - | - | - | Flex(2026-11-13) |
-| IB | URA | 840.0 | 50.432105573 USD | 31.84 USD | 26746 USD | 6.6% | - | - | 54.4 | 0.84 | - | Flex(2026-11-13) |
-| IB | VRT | 85.0 | 289.688176106 USD | 202.07 USD | 17176 USD | 4.3% | - | - | - | - | - | Flex(2026-11-13) |
-| Firstrade | CEG | 29.0 | 272.2 USD | 262.75 USD | 7620 USD | 1.9% | - | - | - | - | - | Stmt(20260731) |
-| Firstrade | GEV | 9.0 | 945.0 USD | 990.29 USD | 8913 USD | 2.2% | - | - | - | - | - | Stmt(20260731) |
-| Firstrade | QQQM | 86.3518 | 299.4 USD | 283.29 USD | 24463 USD | 6.1% | - | - | 38.7 | 1.26 | - | Stmt(20260731) |
+| Futu | US.SCHD | 588.0 | 30.206 USD | 34.904 USD | 20524 USD | 5.2% | 2763 USD | 15.6% | 25.5 | 0.31 | - | live-OpenD |
+| Futu | US.QQQM | 35.0 | 240.873 USD | 270.24 USD | 9458 USD | 2.4% | 1028 USD | 12.2% | 40.9 | 0.46 | - | live-OpenD |
+| Futu | US.AVGO | 51.0 | 370.35 USD | 351.885 USD | 17946 USD | 4.6% | -942 USD | -5.0% | 49.0 | 0.27 | - | live-OpenD |
+| Futu | US.AAPL | 56.0 | 305.56 USD | 352.89 USD | 19762 USD | 5.0% | 2650 USD | 15.5% | 18.4 | 0.2 | - | live-OpenD |
+| IB | GRID | 218.0 | 196.402405573 USD | 155.15 USD | 33823 USD | 8.6% | - | - | 53.5 | 0.39 | - | Flex(2026-11-17) |
+| IB | PLTR | 227.0 | 131.423413062 USD | 156.56 USD | 35539 USD | 9.0% | - | - | 71.8 | 0.13 | - | Flex(2026-11-17) |
+| IB | QQQM | 434.0 | 249.066141779 USD | 270.42 USD | 117362 USD | 29.9% | - | - | 40.9 | 0.46 | - | Flex(2026-11-17) |
+| IB | SGOV | 387.0 | 100.683505574 USD | 100.59 USD | 38928 USD | 9.9% | - | - | 5.0 | 0.31 | - | Flex(2026-11-17) |
+| IB | SPCX | 122.0 | 140.002405574 USD | 141.7 USD | 17287 USD | 4.4% | - | - | 50.5 | 0.33 | - | Flex(2026-11-17) |
+| IB | URA | 840.0 | 50.432105573 USD | 30.04 USD | 25234 USD | 6.4% | - | - | 71.3 | 0.48 | - | Flex(2026-11-17) |
+| IB | VRT | 85.0 | 289.688176106 USD | 190.37 USD | 16181 USD | 4.1% | - | - | 90.8 | 0.17 | - | Flex(2026-11-17) |
+| Firstrade | CEG | 29.0 | 272.2 USD | 262.75 USD | 7620 USD | 1.9% | - | - | 58.0 | 0.09 | - | Stmt(20260731) |
+| Firstrade | GEV | 9.0 | 945.0 USD | 990.29 USD | 8913 USD | 2.3% | - | - | 71.2 | 0.26 | - | Stmt(20260731) |
+| Firstrade | QQQM | 86.3518 | 299.4 USD | 283.29 USD | 24463 USD | 6.2% | - | - | 40.9 | 0.46 | - | Stmt(20260731) |
 
-* 📊 總資產估值 (FX→USD, 已 exclude 媽媽資產): **$402,756**
+* 📊 總資產估值 (FX→USD, 已 exclude 媽媽資產): **$393,040**
 * 🎯 90/10 陣型評估 (CK auth 2026-07-14):
-  - 增長 (growth): $363,839 = **90.3%** | 目標 90% | drift +0.3% ✅
-  - 防禦 (defense: SGOV+現金): $46,590 = **11.6%** | 目標 10% | drift +1.6% ⚠️ 超配
-  - 戶口現金: $7,673
+  - 增長 (growth): $354,111 = **90.1%** | 目標 90% | drift +0.1% ✅
+  - 防禦 (defense: SGOV+現金): $52,485 = **13.4%** | 目標 10% | drift +3.4% ⚠️ 超配
+  - 戶口現金: $13,557
 
 ## 三、 觀察名單與掛單深度 (Watchlist & Order Book) + 微觀結構 *v4.1*
 * 活動掛單 (Active Orders):
   1. [IB 掛單需 IB Gateway 先讀到; Flex read-only 讀唔到掛單. CK 喺 IB 落單]
 * 觀察名單技術快照 + 微觀結構 X 光 (報價: Futu OpenD → yfinance fallback):
-  * SPCX: [需 Futu Basic 訂閱 / yfinance 離線] | IV Rank: - | Vol/30dAvg: - | 下次財報: -
-  * P: [需 Futu Basic 訂閱 / yfinance 離線] | IV Rank: - | Vol/30dAvg: - | 下次財報: -
-  * AVGO: [需 Futu Basic 訂閱 / yfinance 離線] | IV Rank: 11.5 | Vol/30dAvg: 1.01 | 下次財報: -
-  * QQQM: [需 Futu Basic 訂閱 / yfinance 離線] | IV Rank: 38.7 | Vol/30dAvg: 1.26 | 下次財報: -
-  * URA: [需 Futu Basic 訂閱 / yfinance 離線] | IV Rank: 54.4 | Vol/30dAvg: 0.84 | 下次財報: -
+  * SPCX: 最新價 $144.53 | IV Rank: 50.5 | Vol/30dAvg: 0.33 | 下次財報: -
+  * P: 最新價 $101.29 | IV Rank: 214.8 | Vol/30dAvg: 0.31 | 下次財報: -
+  * AVGO: 最新價 $352.08 | IV Rank: 49.0 | Vol/30dAvg: 0.27 | 下次財報: -
+  * QQQM: 最新價 $270.33 | IV Rank: 40.9 | Vol/30dAvg: 0.46 | 下次財報: -
+  * URA: 最新價 $29.60 | IV Rank: 71.3 | Vol/30dAvg: 0.48 | 下次財報: -
 
 ## 四、 宏觀與風險雷達 (Macro Risk Radar) *v4.1 升級*
-* MOVE Index: None (債市恐慌指標, >100=緊張)
-* VIX (標普恐慌指數): None | VIX9D (9日短期): None | VIX9D/VIX Ratio: - (Ratio>1=短期恐慌升溫)
+* MOVE Index: 98.48 (債市恐慌指標, >100=緊張)
+* VIX (標普恐慌指數): 24.4 | VIX9D (9日短期): 24.98 | VIX9D/VIX Ratio: 1.02 (Ratio>1=短期恐慌升溫)
 * PCC (Put/Call Ratio 全市場): None ( >1.2=極端恐慌/超賣反彈機會; <0.7=極端貪婪/頂部風險 )
 * Sahm Rule: 0.0% (衰退指標, >0.5%=衰退信號)
-* High-Yield Spread: 3.23% (信用違約風險, >6%=壓力)
-* FOMC 倒數: 21 天 (下次 2026-12-08)
+* High-Yield Spread: 3.43% (信用違約風險, >6%=壓力)
+* FOMC 倒數: 20 天 (下次 2026-12-08)
 
 ## 五、 Alpha 獵物名單 (Quant Screener) *v4.1 動態 AI 生態圈版*
 * 掃描 [納斯達克 100 / 標普 500] 成份股 — 第0層硬門檻(市值>100億/30日均量>200萬/價>EMA200) + 第1層多因子計分(滿分100) — 僅列 總分>=65 前 3-5 隻
@@ -74,6 +74,6 @@ note: 此檔由腳本自動生成，策略筆記請改 CK.md
 *今日無標的達標，AI 陣營缺乏黃金坑，維持戰略靜默。*
 
 ## 六、建議行動 (Actionable Insights)
-1. ✅ **陣型健康** — 90/10 drift 在 ±3% 內，保持現狀
+1. 💰 **現金/SGOV 過多 3.4%** → 錯失增長機會，考慮分批轉增長倉
 
 === [END OF MAX DATA PACK v4.1] ===
